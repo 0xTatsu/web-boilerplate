@@ -5,7 +5,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const xPath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
-	// files
+  // files
   mainEntry: xPath('src/index.js'),
   appHtml: xPath('public/index.html'),
   appFavicon: xPath('public/favicon.ico'),
@@ -19,15 +19,13 @@ module.exports = {
   FILENAME_LOADER: 'assets/files/[name].[hash:8].[ext]',
   appBundle: 'assets/js/app.[hash:8].js',
   chunkFilename: 'assets/js/[name].[hash:4].chunk.js',
-  DLL_FILENAME: 'assets/js/[name].dll.js',
+  DLL_FILENAME: '[name].dll.js',
   DLL_MANIFEST_FILENAME: '[name]-manifest.json',
   HASH_FILE_PATH: xPath('node_modules/.bin/_vendor_hash'),
 
-	// directories
+  // directories
   appRoot: xPath(''),
   appSrc: xPath('src'),
-  appBuild: xPath('build'),
-  appDev: xPath('build/dev'),
   appDist: xPath('dist'),
   appPublic: xPath('public'),
 
